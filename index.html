@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy Killer Battle</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            background: #000;
+        }
+        #canvas-container {
+            width: 100vw;
+            height: 100vh;
+        }
+        #controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            z-index: 10;
+        }
+        #controls h2 {
+            margin-bottom: 10px;
+            color: #ff6b6b;
+        }
+        #controls p {
+            margin: 5px 0;
+        }
+        button {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #ff5252;
+        }
+        #status {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    <div id="controls">
+        <h2>Legacy Killer Battle</h2>
+        <p><strong>Camera:</strong> Drag to rotate</p>
+        <p><strong>Zoom:</strong> Scroll wheel</p>
+        <button id="restart-btn">Restart Battle</button>
+    </div>
+    <div id="status">Battle in Progress...</div>
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
